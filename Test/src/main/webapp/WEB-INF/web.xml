@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>GoogleSearcher</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+		<welcome-file>Search.html</welcome-file>
+	</welcome-file-list>
+	<display-name>Test</display-name>
+
+	<servlet>
+		<servlet-name>testing</servlet-name>
+		<servlet-class>com.adv.servlets.Testing</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>testing</servlet-name>
+		<url-pattern>/web</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Generic</servlet-name>
+		<servlet-class>com.adv.servlets.Generic</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Generic</servlet-name>
+		<url-pattern>/gen</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>HTTP</servlet-name>
+		<servlet-class>com.adv.servlets.Http</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HTTP</servlet-name>
+		<url-pattern>/http</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DemoServlet</servlet-name>
+		<servlet-class>com.adv.servlets.DemoServlet</servlet-class>
+
+		<init-param>
+			<param-name>driver</param-name>
+			<param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>
+		</init-param>
+
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DemoServlet</servlet-name>
+		<url-pattern>/servlet1</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>com.adv.servlets.Login</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Welcome</servlet-name>
+		<servlet-class>com.adv.servlets.Welcome</servlet-class>
+	</servlet>
+	<servlet>
+		<description></description>
+		<display-name>MySearcher</display-name>
+		<servlet-name>MySearcher</servlet-name>
+		<servlet-class>com.adv.servlets.MySearcher</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MySearcher</servlet-name>
+		<url-pattern>/MySearcher</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Welcome</servlet-name>
+		<url-pattern>/welcome</url-pattern>
+	</servlet-mapping>
+
+</web-app>
